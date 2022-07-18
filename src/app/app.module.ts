@@ -23,15 +23,15 @@ import { environment } from 'src/environments/environment';
 import { appReducers } from './redux/app.reducer';
 
 
-const firebaseConfig = {
-  apiKey: "AIzaSyBNy7_9yaHgvz-_8QaYfBNvwLCfRlzhgIc",
-  authDomain: "zero-project-4609c.firebaseapp.com",
-  projectId: "zero-project-4609c",
-  storageBucket: "zero-project-4609c.appspot.com",
-  messagingSenderId: "155878794460",
-  appId: "1:155878794460:web:6b4f90bcf1e508dff34019",
-  measurementId: "G-VVWS4PB4MC"
-}
+// const firebaseConfig = {
+//   apiKey: "AIzaSyBNy7_9yaHgvz-_8QaYfBNvwLCfRlzhgIc",
+//   authDomain: "zero-project-4609c.firebaseapp.com",
+//   projectId: "zero-project-4609c",
+//   storageBucket: "zero-project-4609c.appspot.com",
+//   messagingSenderId: "155878794460",
+//   appId: "1:155878794460:web:6b4f90bcf1e508dff34019",
+//   measurementId: "G-VVWS4PB4MC"
+// }
 
 
 @NgModule({
@@ -52,7 +52,8 @@ const firebaseConfig = {
       logOnly: environment.production
     }),
 
-    AngularFireModule.initializeApp(firebaseConfig),
+    // AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule, 
 
     MatSidenavModule,
