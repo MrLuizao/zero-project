@@ -15,22 +15,40 @@ import { InfoComponent } from './dashboard/components/info/info.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+
+
+const firebaseConfig = {
+  apiKey: "AIzaSyBNy7_9yaHgvz-_8QaYfBNvwLCfRlzhgIc",
+  authDomain: "zero-project-4609c.firebaseapp.com",
+  projectId: "zero-project-4609c",
+  storageBucket: "zero-project-4609c.appspot.com",
+  messagingSenderId: "155878794460",
+  appId: "1:155878794460:web:6b4f90bcf1e508dff34019",
+  measurementId: "G-VVWS4PB4MC"
+}
+
+
 @NgModule({
   declarations: [
     AppComponent,
     WrapperComponent,
     DashboardComponent,
-    InfoComponent,
+    InfoComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
 
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFirestoreModule, 
+
     MatSidenavModule,
     MatIconModule,
     MatListModule,
-    MatToolbarModule
+    MatToolbarModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
