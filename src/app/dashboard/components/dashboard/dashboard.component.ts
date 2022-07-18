@@ -23,9 +23,9 @@ export class DashboardComponent implements OnInit {
     //   console.log(resp); 
     // });
 
-    this.fireService.getDataFromFirebase().subscribe( (resp)=>{
-      console.log(resp); 
-    });
+    // this.fireService.getDataFromFirebase().subscribe( (resp)=>{
+    //   console.log(resp); 
+    // });
 
     
     if(localStorage.getItem('userID') == null){

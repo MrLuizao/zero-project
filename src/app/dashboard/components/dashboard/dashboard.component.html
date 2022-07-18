@@ -1,4 +1,89 @@
 
-<div class="grid-center">
-    <p>dashboard works!</p>
+<div class="flex-center" style="height: 75%;">
+    <div class="form-contain">
+        <div class="title">
+            <mat-icon mat-list-icon >
+                <img src="assets/icons/mis_datos-1.svg">
+            </mat-icon>
+            <span>Datos generales</span>
+            <mat-icon mat-list-icon>keyboard_arrow_right</mat-icon>
+        </div>
+
+        <form>
+            <div class="contain-input">
+                <input matInput placeholder="Nombre(s)">
+                &nbsp;&nbsp;
+                <input matInput placeholder="Apellidos">
+            </div>
+            <div class="contain-input" style="max-height: 46px;">
+                <input matInput placeholder="Día" class="m-w20">
+                &nbsp;&nbsp;
+                <input matInput placeholder="Edad" class="m-w20">
+                &nbsp;&nbsp;
+                <input matInput placeholder="Género" class="m-w20">
+                &nbsp;&nbsp;
+
+                <div style="margin-left: 8px;">
+                    <span class="txt-span"> Nacionalidad</span> <br>
+                        <div style="display: flex;">
+                            <mat-checkbox class="example-margin">
+                              Mexicana
+                            </mat-checkbox>
+                            &nbsp;&nbsp;
+                            <mat-checkbox class="example-margin">
+                                Extranjera
+                            </mat-checkbox>
+                        </div>
+                </div>
+
+            </div>
+
+            <div class="contain-input">
+                <input matInput placeholder="Domicilio">
+            </div>
+
+            <div class="contain-input">
+                <input matInput placeholder="Teléfono Móvil">
+                &nbsp;&nbsp;
+                <input matInput placeholder="Teléfono Fijo">
+            </div>
+
+            <div class="contain-input">
+                <input matInput placeholder="RFC">
+                &nbsp;&nbsp;
+                <input matInput placeholder="CURP">
+            </div>
+
+            <div class="contain-input">
+                <input matInput placeholder="Actividad Económica">
+            </div>
+            
+
+            <button mat-flat-button color="primary">Guardar cambios</button>
+
+        </form>
+
+    </div>
+</div>
+<div class="flex-center">
+    <section>
+        <div class="row-grid">
+            <img src="assets/icons/notificaciones-1.svg">
+            <span>Documentos de identificación</span>
+        </div>
+        <div class="row-grid">
+            <img src="assets/icons/notificaciones-1.svg">
+            <span>Cuenta bancaria</span>
+        </div>
+    </section>
+    <section>
+        <div class="row-grid">
+            <img src="assets/icons/notificaciones-1.svg">
+            <span>Contrato</span>
+        </div>
+        <div class="row-grid">
+            <img src="assets/icons/notificaciones-1.svg">
+            <span>Beneficiarios</span>
+        </div>
+    </section>
 </div>

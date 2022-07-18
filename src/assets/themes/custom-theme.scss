@@ -16,10 +16,12 @@ body > app-root > app-wrapper > mat-sidenav-container > mat-sidenav{
 }
 
 .contain-btn{
-    display: flex;
-    justify-content: flex-end;
-    margin-right: 32px;
-    margin-top: 32px;
+
+    position: fixed;
+    width: 100px;
+    height: 100px;
+    bottom: 0;
+    right: -35px;
 }
 
 .btn-call{

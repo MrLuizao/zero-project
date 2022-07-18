@@ -8,6 +8,12 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
+import { MatInputModule } from '@angular/material/input';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+
 
 import { WrapperComponent } from './dashboard/components/wrapper/wrapper.component';
 import { DashboardComponent } from './dashboard/components/dashboard/dashboard.component';
@@ -60,6 +66,11 @@ import { appReducers } from './redux/app.reducer';
     MatIconModule,
     MatListModule,
     MatToolbarModule,
+    MatGridListModule,
+    MatCardModule,
+    MatButtonModule,
+    MatInputModule,
+    MatCheckboxModule
   ],
   providers: [],
   bootstrap: [AppComponent]
