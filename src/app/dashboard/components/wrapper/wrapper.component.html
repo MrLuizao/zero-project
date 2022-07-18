@@ -3,21 +3,69 @@
     <mat-sidenav #sidenav mode="side" opened="true">
         <mat-nav-list>
             <mat-list-item>
-                <mat-icon mat-list-icon class="chevron-button" (click)="isExpanded = !isExpanded" [ngClass]="{'rotated': isExpanded}">chevron_right</mat-icon>
+                <mat-icon mat-list-icon class="chevron-button" (click)="isExpanded = !isExpanded" [ngClass]="{'rotated': isExpanded}">menu</mat-icon>
             </mat-list-item>
-            <mat-list-item [routerLink]=" 'dashboard' ">
-                <mat-icon mat-list-icon>home</mat-icon>
-                <span *ngIf="isExpanded">Dashboard</span>
+
+            <mat-list-item >
+                <mat-icon mat-list-icon *ngIf="!isExpanded">notifications</mat-icon>
+                <span class="text-primary" *ngIf="isExpanded"> Bienvenido, <mat-icon mat-list-icon>notifications</mat-icon>
+                    <br> Juan Carlos Moreno</span>                
             </mat-list-item>
+            <mat-list-item >
+                <span class="txt-min" *ngIf="isExpanded">
+                    Último acceso, 10 de Marzo del 2022 <br> a las 11:45:59
+                </span>
+            </mat-list-item>
+
+
             <mat-list-item [routerLink]=" 'info' ">
-                <mat-icon mat-list-icon>important_devices</mat-icon>
-                <span *ngIf="isExpanded">Info</span>
+                <mat-icon mat-list-icon >
+                    <img src="assets/icons/mis_datos.svg">
+                </mat-icon>
+                <span *ngIf="isExpanded">Mis Datos</span>
             </mat-list-item>
+
+            <mat-list-item>
+                <mat-icon mat-list-icon >
+                    <img src="assets/icons/inversiones.svg">
+                </mat-icon>
+                <span *ngIf="isExpanded">Mis Inversiones</span>
+            </mat-list-item>
+            <mat-list-item>
+                <mat-icon mat-list-icon >
+                    <img src="assets/icons/movimientos.svg">
+                </mat-icon>
+                <span *ngIf="isExpanded">Movimientos</span>
+            </mat-list-item>
+
+            <mat-list-item [routerLink]=" 'dashboard' ">
+                <mat-icon mat-list-icon >
+                    <img src="assets/icons/oportunidades.svg">
+                </mat-icon>
+                <span *ngIf="isExpanded">Oportunidades</span>
+            </mat-list-item>
+
+            <mat-list-item [routerLink]=" 'settings' ">
+                <mat-icon mat-list-icon >
+                    <img src="assets/icons/configuracion.svg">
+                </mat-icon>
+                <span *ngIf="isExpanded">Configuración</span>
+            </mat-list-item>
+                
         </mat-nav-list>
+        
+        <section class="footer" *ngIf="isExpanded">
+            <span>PTI es una marca registrada</span> <br>
+            <span>Términos y Condiciones & Aviso de Privacidad</span>
+        </section>
     </mat-sidenav>
 
-    <div>
+    <div style="height: 100%;">
         <router-outlet></router-outlet>
+
+        <div class="contain-btn">
+            <section class="btn-call"></section>
+        </div>
     </div>
 </mat-sidenav-container>
 

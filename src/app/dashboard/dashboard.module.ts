@@ -1,10 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DashboardRoutingModule } from './dashboard-routing.module';
+import { SettingsComponent } from './components/settings/settings.component';
 
 @NgModule({
-  declarations: [],
-  imports: [
+  declarations: [
+    SettingsComponent
+  ],
+  imports: [    
     CommonModule,
     DashboardRoutingModule
   ]

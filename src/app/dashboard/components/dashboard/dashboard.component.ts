@@ -43,8 +43,7 @@ export class DashboardComponent implements OnInit {
 
       let userID = localStorage.getItem('userID');      
       this.fireService.getUserProfileInfo(userID).subscribe( (subs: any)=>{
-        console.log('getUserProfileInfo',subs);
-
+        
         this.store.dispatch( fromActions.setProfileInfoAction({payload: subs}) );
 
       });
