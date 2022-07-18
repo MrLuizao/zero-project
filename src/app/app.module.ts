@@ -17,6 +17,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import { StoreModule } from '@ngrx/store';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { environment } from 'src/environments/environment';
+import { appReducers } from './redux/app.reducer';
 
 
 const firebaseConfig = {
@@ -41,6 +45,12 @@ const firebaseConfig = {
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+
+    StoreModule.forRoot(appReducers),
+    StoreDevtoolsModule.instrument({
+      maxAge: 25,
+      logOnly: environment.production
+    }),
 
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFirestoreModule, 
