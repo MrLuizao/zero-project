@@ -1,88 +1,25 @@
 
+<mat-carousel
+    timings="250ms ease-in"
+    [autoplay]="true"
+    color="primary"
+    maxWidth="auto"
+    [slides]="slides.lenght"
+    [proportion]="60"
+    [interval]="6000"
+    [loop]="true"
+    [hideArrows]="false"
+    [hideIndicators]="false"
+    [useKeyboard]="true"
+    [useMouseWheel]="false"
+    orientation="ltr"
+>
+    <mat-carousel-slide
+    #matCarouselSlide
+    *ngFor="let slide of slides; let i = index"
+    [image]="slide.image"
+    overlayColor="#00000040"
+    [hideOverlay]="false"
+    ></mat-carousel-slide>
+</mat-carousel>
 
-<!-- <div class="grid-center">
-    <ng-image-slider [images]="imgCollection" #nav style="height: 75%;"></ng-image-slider>
-</div> -->
-
-<!-- <div class="flex-center">
-
-    <div class="form-contain">
-        Luis
-    </div>
-    <div class="form-contain">
-        Luis
-    </div>
-    <div class="form-contain">
-        Luis
-    </div>
-
-</div> -->
-
-<!-- interval="6000"
-proportion="25"
-slides=3 -->
-
-<div class="grid-center">
-
-    <mat-carousel
-      timings="250ms ease-in"
-      [autoplay]="true"
-      color="accent"
-      maxWidth="auto"
-      [slides]="slides.lenght"
-      [proportion]="100"
-      [interval]="6000"
-      [loop]="true"
-      [hideArrows]="false"
-      [hideIndicators]="false"
-      [useKeyboard]="true"
-      [useMouseWheel]="false"
-      orientation="ltr"
-    >
-      <mat-carousel-slide
-        #matCarouselSlide
-        *ngFor="let slide of slides; let i = index"
-        [image]="slide.image"
-        overlayColor="#00000040"
-        [hideOverlay]="false"
-      ></mat-carousel-slide>
-    </mat-carousel>
-    
-</div>
-
-<!-- <div class="slide">
-    <div class="slide-inner">
-        <input class="slide-open" type="radio" id="slide-1" 
-              name="slide" aria-hidden="true" hidden="" checked="checked">
-        <div class="slide-item">
-            <img src="https://www.migueltroyano.com/wp-content/uploads/2020/10/embeddingApi_7.jpg">
-        </div>
-        <input class="slide-open" type="radio" id="slide-2" 
-              name="slide" aria-hidden="true" hidden="">
-        <div class="slide-item">
-            <img src="https://www.migueltroyano.com/wp-content/uploads/2020/09/postgres_copy.png">
-        </div>
-        <input class="slide-open" type="radio" id="slide-3" 
-              name="slide" aria-hidden="true" hidden="">
-        <div class="slide-item">
-            <img src="https://www.migueltroyano.com/wp-content/uploads/2020/09/excel_guardar_como_csv.jpg">
-        </div>
-        <label for="slide-3" class="slide-control prev control-1">‹</label>
-        <label for="slide-2" class="slide-control next control-1">›</label>
-        <label for="slide-1" class="slide-control prev control-2">‹</label>
-        <label for="slide-3" class="slide-control next control-2">›</label>
-        <label for="slide-2" class="slide-control prev control-3">‹</label>
-        <label for="slide-1" class="slide-control next control-3">›</label>
-        <ol class="slide-indicador">
-            <li>
-                <label for="slide-1" class="slide-circulo">•</label>
-            </li>
-            <li>
-                <label for="slide-2" class="slide-circulo">•</label>
-            </li>
-            <li>
-                <label for="slide-3" class="slide-circulo">•</label>
-            </li>
-        </ol>
-    </div>
-</div> -->
