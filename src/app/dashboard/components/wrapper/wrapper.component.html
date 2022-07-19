@@ -9,7 +9,7 @@
             <mat-list-item >
                 <mat-icon mat-list-icon *ngIf="!isExpanded">notifications</mat-icon>
                 <span class="text-primary" *ngIf="isExpanded"> Bienvenido, <mat-icon mat-list-icon>notifications</mat-icon>
-                    <br> Juan Carlos Moreno</span>                
+                    <br> {{userData.name}} {{userData.lastname}}</span>                
             </mat-list-item>
             <mat-list-item >
                 <span class="txt-min" *ngIf="isExpanded">
@@ -64,7 +64,9 @@
         <router-outlet></router-outlet>
 
         <div class="contain-btn">
-            <section class="btn-call"></section>
+            <section class="btn-call">
+                <img src="assets/icons/asistencia.svg">
+            </section>
         </div>
     </div>
 </mat-sidenav-container>

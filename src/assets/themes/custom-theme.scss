@@ -30,3 +30,7 @@ body > app-root > app-wrapper > mat-sidenav-container > mat-sidenav{
     background-image: linear-gradient(to right, #ff87a7 0%, #ff4778 100%);
     border-radius: 50%;
 }
+
+.carousel{
+    position: unset;
+}

@@ -9,57 +9,56 @@
             <mat-icon mat-list-icon>keyboard_arrow_right</mat-icon>
         </div>
 
-        <form>
+        <form [formGroup]="formGroup" (ngSubmit)="submitForm()">
             <div class="contain-input">
-                <input matInput placeholder="Nombre(s)">
+                <input matInput placeholder="Nombre(s)" formControlName="name" name="name" type="text">
                 &nbsp;&nbsp;
-                <input matInput placeholder="Apellidos">
+                <input matInput placeholder="Apellidos" formControlName="lastname" name="lastname" type="text">
             </div>
             <div class="contain-input" style="max-height: 46px;">
-                <input matInput placeholder="Día" class="m-w20">
+                <input matInput placeholder="Día" class="m-w20" formControlName="date" name="date" type="text">
                 &nbsp;&nbsp;
-                <input matInput placeholder="Edad" class="m-w20">
+                <input matInput placeholder="Edad" class="m-w20" formControlName="age" name="age" type="text">
                 &nbsp;&nbsp;
-                <input matInput placeholder="Género" class="m-w20">
+                <input matInput placeholder="Género" class="m-w20" formControlName="gender" name="gender" type="text">
                 &nbsp;&nbsp;
 
                 <div style="margin-left: 8px;">
                     <span class="txt-span"> Nacionalidad</span> <br>
-                        <div style="display: flex;">
-                            <mat-checkbox class="example-margin">
-                              Mexicana
-                            </mat-checkbox>
-                            &nbsp;&nbsp;
-                            <mat-checkbox class="example-margin">
-                                Extranjera
-                            </mat-checkbox>
+                        <div style="display: flex; align-items: flex-end">
+                            <input type="radio" name="country" formControlName="country" value="Mexicana">
+                            <span>Mexicana</span>
+                                &nbsp;&nbsp;
+                            <input type="radio" name="country" formControlName="country" value="Extranjera">
+                            <span>Extranjera</span>
                         </div>
                 </div>
 
             </div>
 
             <div class="contain-input">
-                <input matInput placeholder="Domicilio">
+                <input matInput placeholder="Domicilio" formControlName="direction" name="direction" type="text"> 
             </div>
 
             <div class="contain-input">
-                <input matInput placeholder="Teléfono Móvil">
+                <input matInput placeholder="Teléfono Móvil" formControlName="mobile" name="mobile" type="number">
                 &nbsp;&nbsp;
-                <input matInput placeholder="Teléfono Fijo">
+                <input matInput placeholder="Teléfono Fijo" formControlName="phone" name="phone" type="number">
             </div>
 
             <div class="contain-input">
-                <input matInput placeholder="RFC">
+                <input matInput placeholder="RFC" formControlName="rfc" name="phone" type="text">
                 &nbsp;&nbsp;
-                <input matInput placeholder="CURP">
+                <input matInput placeholder="CURP" formControlName="curp" name="curp" type="text">
             </div>
 
             <div class="contain-input">
-                <input matInput placeholder="Actividad Económica">
-            </div>
+                <input matInput placeholder="Actividad Económica" formControlName="ocupation" name="ocupation" type="text">
+            </div>          
+
+            <button mat-flat-button color="primary" type="submit" [disabled]="formGroup.invalid" *ngIf="!loading">Guardar cambios</button>
             
-
-            <button mat-flat-button color="primary">Guardar cambios</button>
+            <mat-progress-bar mode="indeterminate" *ngIf="loading"></mat-progress-bar>
 
         </form>
 

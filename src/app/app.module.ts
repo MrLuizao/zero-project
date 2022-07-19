@@ -13,6 +13,9 @@ import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatRadioModule } from '@angular/material/radio';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
 
 
 import { WrapperComponent } from './dashboard/components/wrapper/wrapper.component';
@@ -27,17 +30,10 @@ import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from 'src/environments/environment';
 import { appReducers } from './redux/app.reducer';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NgImageSliderModule } from 'ng-image-slider';
 
-
-// const firebaseConfig = {
-//   apiKey: "AIzaSyBNy7_9yaHgvz-_8QaYfBNvwLCfRlzhgIc",
-//   authDomain: "zero-project-4609c.firebaseapp.com",
-//   projectId: "zero-project-4609c",
-//   storageBucket: "zero-project-4609c.appspot.com",
-//   messagingSenderId: "155878794460",
-//   appId: "1:155878794460:web:6b4f90bcf1e508dff34019",
-//   measurementId: "G-VVWS4PB4MC"
-// }
+import { MatCarouselModule } from '@ngmodule/material-carousel';
 
 
 @NgModule({
@@ -48,10 +44,12 @@ import { appReducers } from './redux/app.reducer';
     InfoComponent
   ],
   imports: [
+    ReactiveFormsModule,
+    FormsModule, 
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-
+    NgImageSliderModule,
     StoreModule.forRoot(appReducers),
     StoreDevtoolsModule.instrument({
       maxAge: 25,
@@ -70,7 +68,11 @@ import { appReducers } from './redux/app.reducer';
     MatCardModule,
     MatButtonModule,
     MatInputModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatRadioModule,
+    MatProgressSpinnerModule,
+    MatProgressBarModule,
+    MatCarouselModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

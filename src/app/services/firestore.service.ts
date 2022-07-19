@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { map } from 'rxjs';
+import { ProfileInfoI } from '../interfaces/profile-info.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -17,17 +18,8 @@ export class FirestoreService {
     )
   }
 
-  postUserProfile(){
-
-    const USER_INFO = {
-      id: new Date().getTime().toString(),
-      name: 'Luis',
-      lastName: 'Test',
-      email: 'luisonvr@icloud.com',
-      phone: '7225595400',
-      country: 'Mexico'
-    }
-    return this.firestore.collection('profile-data').add( USER_INFO )
+  postUserProfile( object: ProfileInfoI){
+    return this.firestore.collection('profile-data').add( object )
   }
 
   getUserProfileInfo(idUser: any){
