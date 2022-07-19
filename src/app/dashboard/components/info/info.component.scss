@@ -1,0 +1,121 @@
+
+.product{
+    margin-top: 64px;
+}
+
+.slider-wrap{
+    position: relative;
+    overflow: hidden;
+    height: 612px;
+}
+
+.slider-main{
+    position: absolute;
+    width: 200%;
+}
+
+.item{
+    display: inline-block;
+    width: 13%;
+    position: relative;
+    height: 570px;
+    margin: 0 15px;
+    border-radius: 20px;
+    border: solid 1px rgba(26, 117, 195, 0.4);
+    background-image: linear-gradient(to bottom, rgba(69, 169, 255, 0.12), rgba(69, 169, 255, 0));
+    padding: 16px;
+}
+
+.img{
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: -webkit-fill-available;
+    height: 35%;
+}
+.prev{
+    position: absolute;
+    left: 35px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.next{
+    position: absolute;
+    right: -5px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.title{
+    font-size: 18px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #152062;
+}
+
+.txt-span{
+    font-size: 12px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #152062;
+}
+
+p{
+    text-align: center;
+
+}
+.price{
+    font-size: 20px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #1a75c3;
+    margin-top: 32px;
+}
+
+.green-txt{
+    font-size: 18px;
+    font-weight: 800;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #4ec33e;
+}
+
+.light-txt{
+    font-size: 12px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: rgba(21, 32, 98, 0.5);
+}
+
+.bar-contain{
+    height: 12px;
+    margin: 9px 7px 6px 8px;
+    padding: 0 159px 0 0;
+    border-radius: 6px;
+    box-shadow: inset 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+    background-color: #fff;
+}
+
+.bar-progress{
+    height: 12px;
+    border-radius: 6px;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16), inset 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+    background-image: linear-gradient(to right, #ff87a7, #ff4778);
+}

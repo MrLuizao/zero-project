@@ -34,6 +34,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgImageSliderModule } from 'ng-image-slider';
 
 import { MatCarouselModule } from '@ngmodule/material-carousel';
+import { NextDirective } from './next.directive';
+import { PrevDirective } from './prev.directive';
 
 
 @NgModule({
@@ -41,7 +43,9 @@ import { MatCarouselModule } from '@ngmodule/material-carousel';
     AppComponent,
     WrapperComponent,
     DashboardComponent,
-    InfoComponent
+    InfoComponent,
+    NextDirective,
+    PrevDirective
   ],
   imports: [
     ReactiveFormsModule,
